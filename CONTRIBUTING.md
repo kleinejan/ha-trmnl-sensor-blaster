@@ -16,7 +16,7 @@ This is tricky because of the way Home Assistant handles integrations.
 Once you have the integration installed then you can edit the files locally and send to the home assistant server via scp.
 
 ```bash
-scp custom_components/trmnl_sensor_push/* user@homeassistant.local:/var/homeassistant/custom_components/trmnl_sensor_push
+scp custom_components/trmnl_sensor_blaster/* user@homeassistant.local:/var/homeassistant/custom_components/trmnl_sensor_blaster
 ```
 _You may need to change permissions on the files to make them writable._
 

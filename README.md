@@ -1,48 +1,53 @@
-# TRMNL Sensor Push for Home Assistant
+# TRMNL Entity BlasterIntegration
 
-This Home Assistant integration pushes state changes for entities tagged with "TRMNL" to your TRMNL webhook endpoint.
+A Home Assistant custom integration that pushes sensor data to TRMNL devices with grouped JSON payloads.
 
-This allows you to view the entity states in on your TRMNL device.
+## Features
 
-## Limitations
-Because the e-ink display is optimized for long battery life, updates will be more than 15 minutes out of date typically.
+- **Custom Sensor Groups**: Organize sensors using Home Assistant labels (e.g., "temperatures", "garbage", "humidity")
+- **Grouped JSON Output**: Creates structured payloads like `{"temperatures": [{"name": "toilet", "value": "25°C"}]}`
+- **2KB Payload Management**: Automatically handles TRMNL's payload size limits
+- **Minimal Data Format**: Sends only essential data (name + value) for efficiency
+- **Flexible Configuration**: Multi-select sensor groups with custom values
 
 ## Installation
 
-### HACS Installation
+### HACS (Recommended)
 1. Add this repository to HACS as a custom repository
-2. Install the integration through HACS
+2. Install "TRMNL Entity Push" from HACS
 3. Restart Home Assistant
 
 ### Manual Installation
-1. Copy the `custom_components/trmnl_sensor_push` directory to your Home Assistant's `custom_components` directory
+1. Copy the `trmnl_sensor_blaster` folder to `custom_components/`
 2. Restart Home Assistant
-
-Installation [video](https://screen.studio/share/LFguEhAJ)
 
 ## Configuration
 
-1. In Home Assistant, go to Configuration → Integrations
-2. Click "+ ADD INTEGRATION" and search for "TRMNL Sensor Push"
-3. Enter your TRMNL webhook URL
-   - This URL should look like: `https://usetrmnl.com/api/custom_plugins/AAAA-d000-4000-8000-000000000000`
-   - You can get this URL from your TRMNL custom plugin settings
+1. **Create Labels**: Go to Settings → Labels and create groups like "temperatures", "garbage"
+2. **Label Entities**: Assign labels to your sensors
+3. **Add Integration**: Settings → Devices & Services → Add Integration → "TRMNL Entity Push"
+4. **Configure**: Enter your TRMNL webhook URL and select sensor groups
 
-## Usage
+## Example Output
 
-1. Add the "TRMNL" tag to any entity you want to monitor
-2. When the state of these entities changes, the new state will be pushed to your TRMNL webhook
-3. Updates are rate-limited to once every 30 minutes per entity to prevent overwhelming the endpoint
+```json
+{
+  "temperatures": [
+    {"name": "Living Room", "value": "23.5°C"},
+    {"name": "Bedroom", "value": "22°C"}
+  ],
+  "garbage": [
+    {"name": "Garbage Day", "value": "2 days"}
+  ]
+}
+```
 
-## Troubleshooting
+## Requirements
 
-Check the Home Assistant logs for any error messages. Common issues:
-- Invalid webhook URL
-- Network connectivity problems
-- Rate limiting (updates are limited to once every 30 minutes per entity)
-- Ensure you have the integration enabled in Home Assistant
-- Ensure you have the TRMNL label created and assigned to some entities in Home Assistant
+- Home Assistant 2023.1.0+
+- TRMNL webhook URL
+- Sensors labeled with appropriate groups
 
 ## License
 
-MIT License 
+MIT License

@@ -1,5 +1,5 @@
 {
-  "name": "TRMNL Sensor Push",
+  "name": "TRMNL Sensor Blaster",
   "render_readme": true,
   "homeassistant": "2023.1.0",
   "hacs": "1.6.0"
