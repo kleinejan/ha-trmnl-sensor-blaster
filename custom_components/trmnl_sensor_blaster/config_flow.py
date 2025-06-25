@@ -1,4 +1,4 @@
-"""Config flow for TRMNL Entity Blasterintegration."""
+"""Config flow for TRMNL Entity Blaster integration."""
 from __future__ import annotations
 
 import voluptuous as vol
@@ -36,10 +36,10 @@ async def validate_input(hass: HomeAssistant, data: dict[str, str]) -> dict[str,
     if not sensor_groups:
         raise NoSensorGroups("At least one sensor group must be specified")
     
-    return {"title": f"TRMNL Push ({len(sensor_groups)} groups)"}
+    return {"title": f"TRMNL Blaster ({len(sensor_groups)} groups)"}
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for TRMNL Entity Push."""
+    """Handle a config flow for TRMNL Entity Blaster."""
 
     VERSION = 1
 
@@ -109,7 +109,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         return OptionsFlowHandler(config_entry)
 
 class OptionsFlowHandler(config_entries.OptionsFlow):
-    """Handle options flow for TRMNL Entity Push."""
+    """Handle options flow for TRMNL Entity Blaster."""
 
     def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
         """Initialize options flow."""

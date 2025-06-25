@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the TRMNL Entity Blasterintegration will be documented in this file.
+All notable changes to the TRMNL Entity Blaster integration will be documented in this file.
 
 ## [0.3.0] - 2025-06-24
 
@@ -37,7 +37,7 @@ All notable changes to the TRMNL Entity Blasterintegration will be documented in
 ## [0.1.0] - 2025-06-24
 
 ### Added
-- Initial TRMNL Entity Blasterintegration
+- Initial TRMNL Entity Blaster integration
 - Basic webhook functionality
 - Entity filtering by "TRMNL" label
 - 30-minute update intervals

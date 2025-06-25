@@ -1,4 +1,4 @@
-"""The TRMNL Entity Blasterintegration."""
+"""The TRMNL Entity Blaster integration."""
 from __future__ import annotations
 
 import logging
@@ -55,12 +55,12 @@ def calculate_payload_size(payload: dict) -> int:
     return len(json.dumps(payload, separators=(',', ':')).encode('utf-8'))
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
-    """Set up the TRMNL Entity Blastercomponent."""
-    _LOGGER.debug("TRMNL: Setting up TRMNL Entity Blastercomponent")
+    """Set up the TRMNL Entity Blaster component."""
+    _LOGGER.debug("TRMNL: Setting up TRMNL Entity Blaster component")
     return True
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up TRMNL Entity Blasterfrom a config entry."""
+    """Set up TRMNL Entity Blaster from a config entry."""
     _LOGGER.debug("TRMNL: Setting up config entry")
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.entry_id] = {}

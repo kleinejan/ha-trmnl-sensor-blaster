@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "TRMNL Entity BlasterConfiguration",
+        "title": "TRMNL Entity Blaster Configuration",
         "description": "Configure your TRMNL webhook and sensor groups",
         "data": {
           "url": "TRMNL Webhook URL",
@@ -22,7 +22,7 @@
   "options": {
     "step": {
       "init": {
-        "title": "TRMNL Entity BlasterOptions",
+        "title": "TRMNL Entity Blaster Options",
         "description": "Update your TRMNL configuration",
         "data": {
           "url": "TRMNL Webhook URL",

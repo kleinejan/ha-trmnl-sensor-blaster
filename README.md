@@ -1,4 +1,4 @@
-# TRMNL Entity BlasterIntegration
+# TRMNL Entity Blaster Integration
 
 A Home Assistant custom integration that pushes sensor data to TRMNL devices with grouped JSON payloads.
 
@@ -14,18 +14,18 @@ A Home Assistant custom integration that pushes sensor data to TRMNL devices wit
 
 ### HACS (Recommended)
 1. Add this repository to HACS as a custom repository
-2. Install "TRMNL Entity Push" from HACS
+2. Install "TRMNL Entity Blaster" from HACS
 3. Restart Home Assistant
 
 ### Manual Installation
-1. Copy the `trmnl_sensor_blaster` folder to `custom_components/`
+1. Copy the `trmnl_sensor_push` folder to `custom_components/`
 2. Restart Home Assistant
 
 ## Configuration
 
 1. **Create Labels**: Go to Settings → Labels and create groups like "temperatures", "garbage"
 2. **Label Entities**: Assign labels to your sensors
-3. **Add Integration**: Settings → Devices & Services → Add Integration → "TRMNL Entity Push"
+3. **Add Integration**: Settings → Devices & Services → Add Integration → "TRMNL Entity Blaster"
 4. **Configure**: Enter your TRMNL webhook URL and select sensor groups
 
 ## Example Output
