@@ -2,6 +2,29 @@
 
 All notable changes to the TRMNL Entity Blaster integration will be documented in this file.
 
+## [0.4.0] - 2025-06-24
+
+### Changed
+- Changed domain from `trmnl_sensor_push` to `trmnl_entity_blaster` to avoid conflicts
+- Renamed directory structure to match new domain
+- Breaking change: Requires uninstall/reinstall of integration
+
+## [0.3.3] - 2025-06-24
+
+### Fixed
+- Removed deprecated explicit config_entry assignment in options flow
+- Ensures compatibility with Home Assistant 2025.12+
+
+## [0.3.2] - 2025-06-24
+
+### Added
+- Icon support in entity payloads when available from Home Assistant
+- Icons included as optional third field alongside name and value
+
+### Enhanced
+- Payload structure now: `{"name": "toilet", "value": "25°C", "icon": "mdi:thermometer"}`
+- Maintains efficiency with icons only added when present on entities
+
 ## [0.3.0] - 2025-06-24
 
 ### Added
