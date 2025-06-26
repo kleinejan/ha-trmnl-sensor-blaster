@@ -1,14 +1,14 @@
 {
-  "domain": "trmnl_sensor_blaster",
+  "domain": "trmnl_entity_blaster",
   "name": "TRMNL Entity Blaster",
-  "codeowners": ["@kleinejan"],
+  "codeowners": ["@yourusername"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/kleinejan/ha-trmnl-sensor-push",
+  "documentation": "https://github.com/yourusername/ha-trmnl-entity-blaster",
   "homekit": {},
   "iot_class": "cloud_push",
   "requirements": [],
   "ssdp": [],
-  "version": "0.3.1",
+  "version": "0.4.0",
   "zeroconf": []
 }

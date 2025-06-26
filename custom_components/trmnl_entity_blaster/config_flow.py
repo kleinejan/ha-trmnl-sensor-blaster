@@ -113,7 +113,7 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
 
     def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
         """Initialize options flow."""
-        self.config_entry = config_entry
+        self._config_entry = config_entry
 
     async def async_step_init(self, user_input=None):
         """Manage the options."""
@@ -121,7 +121,7 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
 
         if user_input is not None:
             try:
-                await validate_input(self.hass, {**self.config_entry.data, **user_input})
+                await validate_input(self.hass, {**self._config_entry.data, **user_input})
             except InvalidURL:
                 errors["base"] = "invalid_url"
             except NoSensorGroups:
@@ -138,14 +138,14 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
             {
                 vol.Required(
                     CONF_URL,
-                    default=self.config_entry.options.get(
-                        CONF_URL, self.config_entry.data.get(CONF_URL, "")
+                    default=self._config_entry.options.get(
+                        CONF_URL, self._config_entry.data.get(CONF_URL, "")
                     ),
                 ): str,
                 vol.Required(
                     CONF_SENSOR_GROUPS,
-                    default=self.config_entry.options.get(
-                        CONF_SENSOR_GROUPS, self.config_entry.data.get(CONF_SENSOR_GROUPS, DEFAULT_SENSOR_GROUPS)
+                    default=self._config_entry.options.get(
+                        CONF_SENSOR_GROUPS, self._config_entry.data.get(CONF_SENSOR_GROUPS, DEFAULT_SENSOR_GROUPS)
                     ),
                 ): selector.SelectSelector(
                     selector.SelectSelectorConfig(

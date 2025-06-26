@@ -22,7 +22,7 @@ _LOGGER = logging.getLogger(__name__)
 CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
 def create_minimal_entity_payload(state) -> dict:
-    """Create minimal payload for a single entity with just name and value."""
+    """Create minimal payload for a single entity with name, value, and optional icon."""
     # Use friendly name if available, otherwise use entity_id
     name = state.attributes.get('friendly_name', state.entity_id.split('.')[-1])
     
@@ -46,6 +46,11 @@ def create_minimal_entity_payload(state) -> dict:
         "name": name,
         "value": value
     }
+    
+    # Add icon if available
+    icon = state.attributes.get('icon')
+    if icon:
+        payload["icon"] = icon
     
     _LOGGER.debug("TRMNL: Created minimal payload for %s: %s", state.entity_id, payload)
     return payload

@@ -7,7 +7,7 @@ A Home Assistant custom integration that pushes sensor data to TRMNL devices wit
 - **Custom Sensor Groups**: Organize sensors using Home Assistant labels (e.g., "temperatures", "garbage", "humidity")
 - **Grouped JSON Output**: Creates structured payloads like `{"temperatures": [{"name": "toilet", "value": "25°C"}]}`
 - **2KB Payload Management**: Automatically handles TRMNL's payload size limits
-- **Minimal Data Format**: Sends only essential data (name + value) for efficiency
+- **Minimal Data Format**: Sends only essential data (name + value + optional icon) for efficiency
 - **Flexible Configuration**: Multi-select sensor groups with custom values
 
 ## Installation
@@ -18,7 +18,7 @@ A Home Assistant custom integration that pushes sensor data to TRMNL devices wit
 3. Restart Home Assistant
 
 ### Manual Installation
-1. Copy the `trmnl_sensor_push` folder to `custom_components/`
+1. Copy the `trmnl_entity_blaster` folder to `custom_components/`
 2. Restart Home Assistant
 
 ## Configuration
@@ -33,11 +33,11 @@ A Home Assistant custom integration that pushes sensor data to TRMNL devices wit
 ```json
 {
   "temperatures": [
-    {"name": "Living Room", "value": "23.5°C"},
-    {"name": "Bedroom", "value": "22°C"}
+    {"name": "Living Room", "value": "23.5°C", "icon": "mdi:home-thermometer"},
+    {"name": "Bedroom", "value": "22°C", "icon": "mdi:bed"}
   ],
   "garbage": [
-    {"name": "Garbage Day", "value": "2 days"}
+    {"name": "Garbage Day", "value": "2 days", "icon": "mdi:trash-can"}
   ]
 }
 ```
