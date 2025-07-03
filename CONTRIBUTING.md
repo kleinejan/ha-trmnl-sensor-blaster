@@ -1,6 +1,6 @@
-# Contributing to TRMNL Sensor Push
+# Contributing to TRMNL Sensor Blaster
 
-Thank you for your interest in contributing to the TRMNL Sensor Push integration for Home Assistant! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to the TRMNL Sensor Blaster integration for Home Assistant! This document provides guidelines and instructions for contributing.
 
 ## How to Contribute
 

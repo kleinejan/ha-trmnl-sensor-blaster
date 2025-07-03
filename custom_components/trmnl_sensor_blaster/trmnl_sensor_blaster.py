@@ -1,4 +1,4 @@
-"""Platform for TRMNL Entity Blaster integration."""
+"""Platform for TRMNL Sensor Blaster integration."""
 import logging
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.template import Template
