@@ -42,6 +42,21 @@ A Home Assistant custom integration that pushes sensor data to TRMNL devices wit
 }
 ```
 
+## TRMNL
+Create a private plugin on TRMNL, put the WEBHOOK from TRMNL into TRMNL-Sensor-Blaster.
+If you 'Force Refresh' and 'Edit Markup' you can see them in 'your variables'.
+
+Now you have all the data you need to build your own dashboard with data from Home assistant.
+
+```yml
+{% for product in TRMNL-temperatuur %}
+          <div>
+  <span class="value value--xxsmall">  {{ product.name }}</span>
+  <span class="value value--xsmall">{{ product.value }}</span>
+            </div>
+{% endfor %}
+```
+
 ## Requirements
 
 - Home Assistant 2023.1.0+
