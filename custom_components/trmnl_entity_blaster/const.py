@@ -1,5 +1,5 @@
 """Constants for the TRMNL Entity Blaster integration."""
-DOMAIN = "trmnl_entity_blaster"
+DOMAIN = "trmnl_sensor_blaster"
 CONF_URL = "url"
 CONF_SENSOR_GROUPS = "sensor_groups"
 DEFAULT_URL = "https://usetrmnl.com/api/custom_plugins/XXXX-XXXX-XXXX-XXXX"  # Example URL

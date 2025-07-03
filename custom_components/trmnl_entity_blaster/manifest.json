@@ -1,10 +1,10 @@
 {
-  "domain": "trmnl_entity_blaster",
-  "name": "TRMNL Entity Blaster",
+  "domain": "trmnl_sensor_blaster",
+  "name": "TRMNL Sensor Blaster",
   "codeowners": ["@kleinejan"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/kleinejan/trmnl-entity-blaster",
+  "documentation": "https://github.com/kleinejan/ha-trmnl-sensor-blaster",
   "homekit": {},
   "iot_class": "cloud_push",
   "requirements": [],

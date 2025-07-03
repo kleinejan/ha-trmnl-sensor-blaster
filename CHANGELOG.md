@@ -2,6 +2,12 @@
 
 All notable changes to the TRMNL Entity Blaster integration will be documented in this file.
 
+## [0.4.1] - 2025-06-26
+
+### Changed
+- Changed domain from `trmnl_entity_blaster` to `trmnl_sensor_blaster`
+- Updated directory structure to match new domain
+
 ## [0.4.0] - 2025-06-24
 
 ### Changed

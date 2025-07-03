@@ -48,6 +48,10 @@ A Home Assistant custom integration that pushes sensor data to TRMNL devices wit
 - TRMNL webhook URL
 - Sensors labeled with appropriate groups
 
+## Thanks
+This is my first integration that could not have been possible without the
+super examples of [TRMNL-SENSOR-PUSH](https://github.com/gitstua/trmnl-sensor-push)
+
 ## License
 
 MIT License
